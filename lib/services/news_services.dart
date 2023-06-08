@@ -7,7 +7,7 @@ class NewsServices with ChangeNotifier {
 
   final String _baseUrl = 'newsapi.org';
   final String _apiKey = 'ADD_YOUR_newsapi.org_API_KEY_HERE';
-  final String _country = 'ar';
+  final String _country = 'us';
 
   static const String business = 'business';
   static const String entertainment = 'entertainment';

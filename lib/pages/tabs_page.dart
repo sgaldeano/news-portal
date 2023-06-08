@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:s17_news_portal/pages/pages.dart';
 
@@ -12,10 +13,13 @@ class TabsPage extends StatelessWidget {
 	Widget build(BuildContext context) {
   	return ChangeNotifierProvider(
 			create: (_) => _NavigationModel(),
-  	  child: const Scaffold(
-    		body: _Pages(),
-				bottomNavigationBar: _NavigationBar(),
-		),
+  	  child: const AnnotatedRegion(
+				value: SystemUiOverlayStyle.light,
+  	    child: Scaffold(
+    			body: _Pages(),
+					bottomNavigationBar: _NavigationBar(),
+				),
+  	  ),
   	);
 	}
 
