@@ -30,7 +30,7 @@ class NewsResponse {
 
 class Article {
   final Source source;
-  // final String author;
+  final String? author;
   final String title;
   final dynamic description;
   final String url;
@@ -40,7 +40,7 @@ class Article {
 
   Article({
     required this.source,
-    // required this.author,
+    required this.author,
     required this.title,
     this.description,
     required this.url,
@@ -51,7 +51,7 @@ class Article {
 
   factory Article.fromJson(Map<String, dynamic> json) => Article(
     source: Source.fromJson(json["source"]),
-    // author: json["author"],
+    author: json["author"] ?? '',
     title: json["title"],
     description: json["description"],
     url: json["url"],
@@ -62,7 +62,7 @@ class Article {
 
   Map<String, dynamic> toJson() => {
     "source": source.toJson(),
-    // "author": author,
+    "author": author,
     "title": title,
     "description": description,
     "url": url,

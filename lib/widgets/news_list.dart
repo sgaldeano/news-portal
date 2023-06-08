@@ -75,12 +75,14 @@ class _CardTopBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Row(
-        children: [
-          Text('${index + 1} ', style: TextStyle(color: appTheme.colorScheme.secondary)),
-          Text(article.source.name.name)
-        ],
-      )
+      child: article.author != ''
+        ? Row(
+            children: [
+              Text('${index + 1} ', style: TextStyle(color: appTheme.colorScheme.secondary)),
+              Text(article.author!)
+            ],
+          )
+        : const SizedBox()
     );
   }
 

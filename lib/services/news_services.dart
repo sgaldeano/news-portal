@@ -6,7 +6,7 @@ import '../models/models.dart';
 class NewsServices with ChangeNotifier {
 
   final String _baseUrl = 'newsapi.org';
-  final String _apiKey = 'ADD_YOUR_NEWSAPI_API_KEY_HERE';
+  final String _apiKey = 'ADD_YOUR_newsapi.org_API_KEY_HERE';
   final String _country = 'ar';
 
   static const String business = 'business';
