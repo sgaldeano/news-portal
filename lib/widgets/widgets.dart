@@ -1,0 +1,1 @@
+export 'package:s17_news_portal/widgets/news_list.dart';
